@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <button v-on:click="tenWa">抽十张蛙头</button>
     <button v-on:click="oneWa">抽蛙头</button><br/><br/><br/>
-    <img  v-for="item in items" v-bind:class='className' v-bind:src="item.url" alt=""/>
+    <img v-for="item in items" v-bind:class='className' v-bind:src="item.url" alt=""/>
   </div>
 </template>
 
@@ -72,7 +72,7 @@ export default {
       this.className = 'cardWidth card'
       this.items = []
       for (let n = 0; n < 10; n++) {
-        this.items[n] = {url: 'http://localhost:3000/assets/lancer.png'}
+        this.items.push({url: 'http://localhost:3000/assets/lancer.png'})
       }
       getFgo(this, 10)
     }
