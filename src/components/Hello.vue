@@ -58,25 +58,23 @@ export default {
     oneWa: function () {
       if (!FLAG) return false
       FLAG = false
-      let self = this
-      self.className = 'cardWidth card'
-      self.items = [
+      this.className = 'cardWidth card'
+      this.items = [
         {
           url: 'http://localhost:3000/assets/lancer.png'
         }
       ]
-      getFgo(self, 1)
+      getFgo(this, 1)
     },
     tenWa: function () {
       if (!FLAG) return false
       FLAG = false
-      let self = this
-      self.className = 'cardWidth card'
-      self.items = []
+      this.className = 'cardWidth card'
+      this.items = []
       for (let n = 0; n < 10; n++) {
-        self.items[n] = {url: 'http://localhost:3000/assets/lancer.png'}
+        this.items[n] = {url: 'http://localhost:3000/assets/lancer.png'}
       }
-      getFgo(self, 10)
+      getFgo(this, 10)
     }
   }
 }
